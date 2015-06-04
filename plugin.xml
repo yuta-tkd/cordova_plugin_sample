@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  id="com.example.sample"
+  version="0.0.1">
+
+    <name>SamplePlugin</name>
+    <description>SamplePlugin Description</description>
+    <author>Yuta Takada</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+    <js-module src="www/sample.js" name="sample">
+        <clobbers target="Sample" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SamplePlugin">
+                <param name="ios-package" value="SamplePlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/SamplePlugin.h" target-dir="src/ios" />
+        <source-file src="src/ios/SamplePlugin.m" target-dir="src/ios" />
+    </platform>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SamplePlugin">
+                <param name="android-package" value="com.example.sample.SamplePlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/com/example/sample/SamplePlugin.java" target-dir="src/com/example/sample" />
+    </platform>
+
+</plugin>
