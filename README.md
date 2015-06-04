@@ -1,5 +1,9 @@
-# Hello World PhoneGap plugin
-Work with PhoneGap 5.1.0
+# Cordova Sample Plugin Android/iOS
+Work with Cordova 5.1.0
+
+##説明
+Cordova(5.1.0)での自作プラグイン(Android/iOS)の初期サンプルです。
+このプラグインを編集することによって、自作プラグインを作ることを薦めます。
 
 ## How To Use
 
